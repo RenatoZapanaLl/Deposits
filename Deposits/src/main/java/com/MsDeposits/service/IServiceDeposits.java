@@ -14,4 +14,7 @@ public interface IServiceDeposits {
 
     Mono<Deposits> save(Deposits deposit);
 
+    Mono<Deposits> updateDeposits(Deposits deposits);
+
+
 }

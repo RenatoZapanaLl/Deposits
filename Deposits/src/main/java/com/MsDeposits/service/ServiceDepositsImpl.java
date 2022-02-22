@@ -31,5 +31,11 @@ public class ServiceDepositsImpl implements IServiceDeposits {
         return repository.save(deposit);
     }
 
+    @Override
+    public Mono<Deposits> updateDeposits(Deposits deposits) {
+        return repository.save(deposits);
+    }
+
+
 
 }

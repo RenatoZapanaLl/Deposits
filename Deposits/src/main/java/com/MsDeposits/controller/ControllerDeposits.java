@@ -26,9 +26,14 @@ public class ControllerDeposits {
 
         return service.findDepositsByDay(fecha);
     }
-
     @PostMapping("/postDeposits")
     Mono<Deposits> postDeposit(@RequestBody Deposits deposit) {
         return service.save(deposit);
+    }
+
+    @PostMapping("/updDeposits")
+    Mono<Deposits> updCustomers (@RequestBody Deposits deposit)
+    {
+        return service.updateDeposits(deposit);
     }
 }
